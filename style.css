@@ -1,3 +1,4 @@
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +11,11 @@ body {
     -webkit-font-smoothing: antialiased !important;
 }
 
-font {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased !important;
-}
-
 li {
     list-style: none;
 }
 
+/* Estilos do cabeçalho */
 header {
     width: 100%;
     height: 100px;
@@ -31,6 +28,7 @@ header {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
+/* Estilos principais */
 .main {
     max-width: 900px;
     margin: 20px auto;
@@ -43,6 +41,7 @@ header {
     border-radius: 8px;
 }
 
+/* Estilos do formulário de postagem */
 .postagem {
     width: 100%;
     display: flex;
@@ -102,6 +101,7 @@ header {
     background-color: #004d40;
 }
 
+/* Estilos do post */
 .post {
     width: 100%;
     margin-bottom: 20px;
@@ -121,13 +121,52 @@ header {
     font-size: 16px;
 }
 
-.post img {
-    max-width: 100%;
-    height: auto;
+.post .post-date {
+    font-size: 12px;
+    color: #999;
     margin-bottom: 10px;
-    border-radius: 5px;
 }
 
+/* Estilos do carrossel */
+.post .carousel {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.post .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.post .carousel img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.post .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.post .carousel-button.prev {
+    left: 10px;
+}
+
+.post .carousel-button.next {
+    right: 10px;
+}
+
+/* Estilos de ações do post */
 .post-actions {
     display: flex;
     gap: 10px;
@@ -152,6 +191,7 @@ header {
     background-color: #004d40;
 }
 
+/* Estilos da segunda seção principal */
 .main2 {
     display: flex;
     flex-direction: column;
